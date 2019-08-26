@@ -21,6 +21,8 @@ Route::get('/contact' , 'FrontendPagesController@show_contact')->name('show_cont
 
 Route::get('/blogs' , 'FrontendPagesController@show_blogs')->name('show_blogs');
 
+Route::post('/editBlog' , 'FrontendPagesController@edit_blog')->name('edit_blog');
+
 Route::get('/blog/id={id}' , 'FrontendPagesController@show_single_blog')->name('show_single_blog');
 
 Route::get('/newblog' , 'FrontendPagesController@new_blog')->name('show_new_blog_page');

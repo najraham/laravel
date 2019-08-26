@@ -64,4 +64,14 @@ class FrontendPagesController extends Controller
         return view('frontend.pages.new_blog');
     }
 
+    public function edit_blog(Request $request)
+    {
+        $blog = Blog::find($request->id);
+        $blog->title = $request->input('title');
+        $blog->content = $request->input('description');
+        $blog->save();
+
+        return redirect('/blogs')->with('success' , 'Blog edited...');
+    }
+
 }

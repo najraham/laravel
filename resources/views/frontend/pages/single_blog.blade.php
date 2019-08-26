@@ -12,7 +12,7 @@
 					<p><img class="img-responsive" src="assets/img/blog01.jpg" alt=""></p>
 					{{$blog->content}}
 					<hr>
-					<p><a href="{{route('show_blogs')}}">Back</a></p>
+					<p><a href="{{route('show_blogs')}}" type="button" class="btn btn-primary">Back</a></p>
 				</div>
 
 			</div><!-- /row -->
