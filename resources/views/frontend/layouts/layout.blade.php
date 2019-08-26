@@ -9,7 +9,9 @@
     <link rel="shortcut icon" href="{{asset('frontend/docs-assets/ico/favicon.png')}}">
 
     <title>Anisha</title>
-
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
     <!-- Bootstrap core CSS -->
     <link href="{{asset('frontend/css/bootstrap.css')}}" rel="stylesheet">
 

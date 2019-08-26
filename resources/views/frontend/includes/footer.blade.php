@@ -2,12 +2,9 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-4">
-                <h4>My Bunker</h4>
-                <p>
-                    Some Address 987,<br/>
-                    +34 9054 5455, <br/>
-                    Madrid, Spain.
-                </p>
+                <h4>Contacts</h4>
+                <p><a href="https://github.com/najraham" class="fa fa-github"></a></p>
+                <p><a href="https://www.linkedin.com/in/anisha-maharjan-128a85155/" class="fa fa-linkedin-square"></a></p>
             </div><!-- /col-lg-4 -->
             
             <div class="col-lg-4">

@@ -14,7 +14,7 @@
                 @else
                     
                     <a class="navbar-brand" href="#" role="button" data-toggle="dropdown">
-                        <span class="mb-0 text-sm  font-weight-bold">{{Auth::user()->name}}</span>
+                        <span class="mb-0 text-sm  font-weight-bold">Welcome {{Auth::user()->name}}!</span>
                     </a>
                     <ul class="dropdown-menu">
                         <li>
