@@ -30,7 +30,6 @@
                     <tbody>
                         @foreach ($blogs as $blog)
                             <tr>
-                                hello world
                                 <th scope="row">{{$blog->title}}</th>
                                 <td class="mutltiline_td">{{$blog->content}}</td>
                                 <td>{{$blog->user->name}}</td>
