@@ -34,8 +34,9 @@
         </div>
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="{{route('show_work')}}">Work</a></li>
-                <li><a href="{{route('show_about')}}">About</a></li>
+                <li><a href="{{route('showIndex')}}">Home</a></li>
+                <li><a href="{{route('showWork')}}">Work</a></li>
+                <li><a href="{{route('showAbout')}}">About</a></li>
                 <li><a href="{{route('show_blogs')}}">Blogs</a></li>
                 <li><a href="{{route('show_contact')}}">Contact</a></li>
                 @if (Auth::guest())

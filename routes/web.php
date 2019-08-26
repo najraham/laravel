@@ -13,9 +13,9 @@
 
 Route::get('/', 'FrontendPagesController@show_index')->name('showIndex');
 
-Route::get('/about', 'FrontendPagesController@show_about')->name('show_about');
+Route::get('/about', 'FrontendPagesController@show_about')->name('showAbout');
 
-Route::get('/work', 'FrontendPagesController@show_work')->name('show_work');
+Route::get('/work', 'FrontendPagesController@show_work')->name('showWork');
 
 Route::get('/contact' , 'FrontendPagesController@show_contact')->name('show_contact');
 
