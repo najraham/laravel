@@ -29,8 +29,14 @@
             
             <!-- Navigation -->
             <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link " href="{{route('showIndex')}}">
+                  <i class="ni ni-planet text-blue"></i> Go to view
+                </a>
+              </li>
               <li class="nav-item ">
-              <a class=" nav-link active " href=" {{route('show_dashboard_index')}}"> <i class="ni ni-tv-2 text-primary"></i> Users
+                <a class=" nav-link active " href=" {{route('show_dashboard_index')}}">
+                 <i class="ni ni-tv-2 text-primary"></i> Users
                 </a>
               </li>
               <li class="nav-item">

@@ -7,7 +7,7 @@
                 <span class="icon-bar"></span>
             </button>
             <div class="dropdown">
-                <a class="navbar-brand" href="#" role="button" data-toggle="dropdown">
+                <a class="navbar-brand" href="{{route('showIndex')}}" role="button" data-toggle="dropdown">
                     <span class="mb-0 text-sm  font-weight-bold">Welcome!</span>
                 </a>
             </div>
@@ -29,7 +29,7 @@
                     <li><a href="{{route('show_dashboard_index')}}">Dashboard</a></li>
                     <li><a>|</a></li>
                     <li>
-                        <a class="navbar-brand" href="#" role="button" data-toggle="dropdown">
+                        <a class="navbar-brand" href="#" role="button" data-toggle="dropdown" style="background-color: #1abc9c">
                             <span class="mb-0 text-sm">{{Auth::user()->name}}</span>
                         </a>
                         <ul class="dropdown-menu">
