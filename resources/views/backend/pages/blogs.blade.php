@@ -31,16 +31,14 @@
                         @foreach ($blogs as $blog)
                             <tr>
                                 <th scope="row">{{$blog->title}}</th>
-                                <td class="mutltiline_td">{{$blog->content}}</td>
+                                <td class="multiline_td">{{$blog->content}}</td>
                                 <td>{{$blog->user->name}}</td>
                                 <td>{{$blog->created_at->diffForHumans()}}</td>
-                                @if ((Auth::user()->id)==($blog->user_id))
-                                    <td>
-                                        <form action="{{route('delete_blog' , ['id'=>$blog->id])}}" method="get">
-                                            <button class="btn btn-danger btn-sm" type="submit">Delete</button>
-                                        </form>
-                                    </td>
-                                @endif
+                                <td>
+                                    <form action="{{route('delete_blog' , ['id'=>$blog->id])}}" method="get">
+                                        <button class="btn btn-danger btn-sm" type="submit">Delete</button>
+                                    </form>
+                                </td>
                             </tr>
                         @endforeach
                         
