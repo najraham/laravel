@@ -39,11 +39,12 @@
                 <li><a href="{{route('showAbout')}}">About</a></li>
                 <li><a href="{{route('show_blogs')}}">Blogs</a></li>
                 <li><a href="{{route('show_contact')}}">Contact</a></li>
+                
                 @if (Auth::guest())
                     <li><a>|</a></li>
                     <li><a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a></li>
                     <li><a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a></li>
-                @elseif((Auth::user()->id)==1)
+                @elseif((Auth::user()->role)==1)
                     <li><a href="{{route('show_dashboard_index')}}">Dashboard</a></li>
                 @endif
             </ul>

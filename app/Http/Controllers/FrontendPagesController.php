@@ -14,6 +14,7 @@ class FrontendPagesController extends Controller
 {
     public function show_index()
     {
+        error_log(\Auth::user()->id);
         $index = FrontendIndex::first();
         $projects = FrontendProject::all();
         return view('frontend.pages.index') -> with ([
