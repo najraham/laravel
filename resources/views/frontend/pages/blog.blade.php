@@ -7,27 +7,33 @@
 	</div>
 	<!-- +++++ Posts Lists +++++ -->
 	<!-- +++++ First Post +++++ -->
-	@foreach ($blogs as $blog)
+	@foreach ($blogs->chunk(2) as $chunk)
 		<div id="grey">
 			<div class="container">
 				<div class="row">
-					<div class="col-lg-8 col-lg-offset-2">
-						{{-- Image --}}
-						{{-- author --}}
-						<p><b>By: {{$blog->user->name}}</b></p>
-						{{-- created at --}}
-						<p><b>{{$blog->created_at->diffForHumans()}}</b></p>
-						{{-- title --}}
-						{{-- route --}}
-						<h4>{{$blog->title}}</h4>
-						{{-- content --}}
-						@if (strlen($blog->content)>30)
-							{{substr($blog->content, 0, 30)}}
-						@else
-							{{$blog->content}}
-						@endif
-						<a href="{{route('show_single_blog' , ['id'=>$blog->id])}}">Continue reading...</a>
-					</div>
+					@foreach ($chunk as $blog)
+						<div class="col-lg-5 col-lg-offset-1">
+							{{-- title --}}
+							<h4>Title: {{$blog->title}}</h4>
+							{{-- content --}}
+							@if (strlen($blog->content)>30)
+							<p>
+								{{substr($blog->content, 0, 30)}}
+								<a href="{{route('show_single_blog' , ['id'=>$blog->id])}}">Continue reading...</a>
+							</p> 
+							@else
+							<p>
+								{{$blog->content}}
+								<a href="{{route('show_single_blog' , ['id'=>$blog->id])}}">Continue reading...</a>
+							</p> 
+							@endif
+							
+							{{-- author --}}
+							<p><b>Written by: {{$blog->user->name}}, {{$blog->created_at->diffForHumans()}}</b></p>
+							
+						</div>	
+					@endforeach
+					
 					@if (!Auth::guest())
 						@if ($blog->user->id == Auth::user()->id)
 							<button class="btn btn-warning" data-toggle="modal" data-target="#myModal_{{$blog->id}}">Edit</button>
